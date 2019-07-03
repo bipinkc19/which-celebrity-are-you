@@ -4,10 +4,9 @@ import pickle
 
 from sklearn.metrics.pairwise import cosine_similarity
 
-from face_classification import FaceClassifier
+from face_recognition import face_locations, face_encodings
 
 DIR = './celeberity_images'
-face_classifier = FaceClassifier(None)
 
 def crop_face(img, boundings):
     y1, x2, y2, x1 = boundings[0]
@@ -32,10 +31,10 @@ while True:
     return_value, img = camera.read()
     cv2.imshow('You', img)
     if cv2.waitKey(1) & 0xFF == ord('c'):
-        boundings = face_classifier.get_face_boundings(img)
+        boundings = face_locations(img)
         if len(boundings) == 1:
             cropped_face = crop_face(img, boundings)
-            embedding = face_classifier.get_face_embeddings(cropped_face)
+            embedding = face_encodings(cropped_face)
             if len(embedding) != 0:
                 closest_celeb = find_closest_image(embedding, celeb_to_embedding)
                 celeb_img = cv2.imread('./celeberity_images/' + closest_celeb + '.jpg')
