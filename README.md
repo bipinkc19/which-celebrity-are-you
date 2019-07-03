@@ -14,6 +14,7 @@ pip install -r requirements.txt
 python3 find_look_alike_celeb.py
 ```
 __Press 'c' to click picture. Only works when single person is infront of the cam__
+__Try out showing Enrique, Tom Cruise, Rihanna's photos through mobile__
 
 # Adding more celebrity
 
