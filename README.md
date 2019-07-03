@@ -1,4 +1,4 @@
-# Which celebrityare you
+# Which celebrity are you??
 
 Using Face Classification
 Face classification is a simple package running on top of [face_recognition](https://pypi.org/project/face_recognition/) package which automates the training process and helps in easily getting the prediction. This could be a helpful addition to developers looking forward to adding the face recognition functionality in their projects.
@@ -16,7 +16,7 @@ pip install -r requirements.txt
 ```py
 python3 find_look_alike_celeb.py
 ```
-__Press 'c' to click picture. Only worlks when single person is infront of the cam__
+__Press 'c' to click picture. Only works when single person is infront of the cam__
 
 # License
 
